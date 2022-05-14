@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="web app" content="Profile Picture Maker" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile Picture Maker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Profile Picture Maker</h1>
+      <div class="wrapper">
+        <div class="profile">
+          <div class="overlay"></div>
+          <div class="repetitionOverlay"></div>
+          <h1 class="initials">AB</h1>
+        </div>
+        <div class="panel">
+          <div class="textinput">
+            <input
+              type="text"
+              id="initials"
+              maxlength="2"
+              placeholder="Your Initials"
+            />
+            <input type="color" value="#000000" id="Textcolor" />
+          </div>
+          <div class="backgroundInputs">
+            <label class="backgroundColor" for="BackColorCheck">
+              <input type="checkbox" name="background" id="BackColorCheck" />
+              <div class="backgroundTrigger">
+                <span class="bgcolor">Background color</span>
+                <span class="bgImage">Background image</span>
+              </div>
+            </label>
+            <div class="bginputswrapper">
+              <input type="color" value="#1b54b0" id="BackColorInput" />
+              <div class="backgroundurl">
+                <input
+                  type="url"
+                  id="BackImageInput"
+                  placeholder="Paste Link here"
+                />
+                <button class="setbackBtn">Set</button>
+              </div>
+            </div>
+
+            <div class="addOverlay">
+              <div class="OverlayWrapper">
+                <div class="overlayColor">
+                  <input type="checkbox" id="overlayColorCheck" />
+                  <label class="addOverlayColor" for="overlayColorCheck"
+                    >Add Overlay</label
+                  >
+                </div>
+
+                <div class="overlayRepetition">
+                  <input type="checkbox" id="overlayRepetitionCheck" />
+                  <label class="addRepetition" for="overlayRepetitionCheck"
+                    >Add Repetition</label
+                  >
+                </div>
+              </div>
+              <input type="color" value="#000000" id="overlayColorInput" />
+            </div>
+          </div>
+          <button class="Downloadbtn">Download</button>
+        </div>
+      </div>
+      <div class="social_links">
+        <a
+          data-text="Github"
+          href="https://github.com/stevewalson"
+          target="_blank"
+          class="github"
+        >
+          <img src="icons/github.svg" alt="Github Link" />
+        </a>
+        <a
+          data-text="Twitter"
+          href="https://twitter.com/steve_walson"
+          target="_blank"
+          class="twitter"
+        >
+          <img src="icons/twitter.svg" alt="Twitter Link" />
+        </a>
+        <a
+          data-text="Buy Me a Coffee"
+          class="coffee"
+          href="https://www.buymeacoffee.com/stevewalson"
+          target="_blank"
+        >
+          <img src="icons/coffee.svg" alt="Buy Me a Coffee Link" />
+        </a>
+        <a
+          data-text="Codepen"
+          href="https://codepen.io/steve_walson"
+          target="_blank"
+          class="codepen"
+        >
+          <img src="icons/codepen.svg" alt="Codepen Link" />
+        </a>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"
+      integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

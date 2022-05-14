@@ -1,0 +1,313 @@
+:root {
+  --main-color: #0063B1;
+  --sec-color: #9CC2D5;
+  --container-C: #e7e7e7;
+  --panel-C: #f1f1f1;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100vh;
+  width: 100%;
+  -webkit-user-select : none;
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 3rem 0 6rem 0;
+  background-color: var(--container-C);
+}
+.heading {
+  font-size: 2.5rem;
+  color: #050505;
+  font-weight: bold;
+}
+.wrapper {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.profile {
+  aspect-ratio: 1/1;
+  width: min(90%, 400px);
+  background-color: var(--main-color);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.profile canvas {
+  position: absolute;
+  z-index: 3;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: #000000;
+  display: none;
+}
+.repetitionOverlay {
+  height: 129%;
+  width: 120%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  word-break: break-all;
+  color: #ffffff19;
+  display: none;
+}
+.initials {
+  font-size: 12em;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 3;
+  display: block;
+}
+.panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  flex-wrap: wrap;
+  aspect-ratio: 1 / 1;
+  width: min(90%, 400px);
+  background-color: var(--panel-C);
+  border-radius: 10px;
+  padding: 0 1rem 30px 1rem;
+  box-shadow: 8px 8px 20px #0000001f;
+  position: relative;
+}
+input {
+  border: none;
+}
+input[type="color"] {
+  background-color: transparent;
+}
+input[type="checkbox"] , #BackImageInput{
+  display: none;
+  height: 30px;
+}
+label,
+input:not(#initials, #BackImageInput) {
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px #00000037);
+}
+.textinput {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100%;
+}
+#initials {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+#initials::placeholder {
+  color: #0000005c;
+  text-align: start;
+  padding-left: 0.5rem;
+}
+#Textcolor {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+}
+.backgroundTrigger {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#BackColorCheck:checked + .backgroundTrigger > .bgcolor {
+  background-color: var(--sec-color);
+}
+#BackColorCheck:checked + .backgroundTrigger > .bgImage {
+  background-color: var(--main-color);
+}
+.backgroundInputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+.backgroundInputs > * {
+  width: 100%;
+}
+#BackImageInput,
+#BackColorInput,
+#overlayColorInput {
+  width: 100%;
+}
+#BackImageInput::placeholder{
+  padding-left: 0.5rem;
+}
+.bgcolor,
+.bgImage {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+.bgcolor {
+  background-color: var(--main-color);
+}
+.bgImage {
+  background-color: var(--sec-color);
+}
+.backgroundurl {
+  position: relative;
+}
+.setbackBtn {
+  background-color: var(--main-color);
+  color: #ffffff;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  display: none;
+  height: 100%;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+.addOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.OverlayWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.addRepetition,
+.addOverlayColor {
+  background-color: var(--sec-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+#overlayColorCheck:checked + .addOverlayColor {
+  background-color: var(--main-color);
+  color: white;
+}
+#overlayRepetitionCheck:checked + .addRepetition {
+  background-color: var(--main-color);
+  color: white;
+}
+#overlayColorInput {
+  visibility: hidden;
+  height: 30px;
+}
+.Downloadbtn {
+  position: absolute;
+  border: none;
+  bottom: -20px;
+  background-color: #00aaff;
+  right: 50%;
+  transform: translateX(50%);
+  width: 90%;
+  opacity: 0;
+  padding: 5px 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.social_links {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+}
+.social_links a {
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px #00000032;
+  transition: all 0.2s ease-in-out;
+}
+.social_links a:hover {
+  background-color: #8297ba;
+}
+.social_links a:hover::before {
+  content: attr(data-text);
+  position: absolute;
+  top: -80%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #8297ba;
+  padding: 1px 4px;
+  white-space: nowrap;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.social_links a img {
+  transition: transform 200ms ease-in-out;
+  z-index: 2;
+}
+.social_links a:hover img {
+  transform: scale(1.1);
+}
+.github {
+  background-color: #000000;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.facebook {
+  background-color: #4267b2;
+}
+.codepen {
+  background-color: #000000;
+}
+.coffee {
+  background-color: #ffdd00;
+}
