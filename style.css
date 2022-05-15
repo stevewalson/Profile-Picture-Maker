@@ -264,7 +264,6 @@ input:not(#initials, #BackImageInput) {
 .social_links a {
   height: 25px;
   width: 25px;
-  border-radius: 15px;
   display: grid;
   place-items: center;
   position: relative;
