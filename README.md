@@ -2,7 +2,7 @@
 
 Simple web app to create cool profile pictures with user's initials or emojis.
 
-Functionalities:
+Features:
 
 - Add initials (2 characters) or Emojis.
 - Change the color of the initials.
