@@ -278,7 +278,7 @@ input:not(#initials, #BackImageInput) {
 .social_links a:hover::before {
   content: attr(data-text);
   position: absolute;
-  top: -80%;
+  top: -90%;
   right: 50%;
   transform: translateX(50%);
   background-color: #8297ba;
