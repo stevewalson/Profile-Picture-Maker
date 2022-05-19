@@ -294,7 +294,7 @@ input:not(#initials, #BackImageInput) {
   z-index: 2;
 }
 .social_links a:hover img {
-  transform: scale(1.1);
+  transform: scale(0.8);
 }
 .github {
   background-color: #000000;
