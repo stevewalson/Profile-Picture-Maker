@@ -50,8 +50,9 @@ html,body {
   aspect-ratio: 1/1;
   width: min(90%, 400px);
   background-color: var(--main-color);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 .profile canvas {
@@ -163,6 +164,7 @@ input:not(#initials, #BackImageInput) {
 #BackColorInput,
 #overlayColorInput {
   width: 100%;
+  border-radius: 2px;
 }
 #BackImageInput::placeholder{
   padding-left: 0.5rem;
